@@ -35,7 +35,5 @@ def workdir_view(request):
     # который возвращает список файлов в рабочей 
     # директории
     files = [f for f in os.listdir('.') if os.path.isfile(f)]
-    s = ''
-    for f in files:
-        s += f + ' '
+    s = '; '.join(files)
     return HttpResponse(s)
