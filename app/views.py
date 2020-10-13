@@ -11,7 +11,7 @@ def home_view(request):
     pages = {
         'Главная страница': reverse('home'),
         'Показать текущее время': reverse('time'),
-        'Показать содержимое рабочей директории': 'workdir'
+        'Показать содержимое рабочей директории': reverse('workdir')
     }
     
     # context и параметры render менять не нужно
